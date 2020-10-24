@@ -1,0 +1,80 @@
+header {
+width: 100%;
+background-color: transparent;
+display: flex;
+justify-content: space-around;
+font-family: sans-serif;
+}
+
+
+#btn-menu{
+    display:none; 
+}
+
+header label {
+    display:none;
+    width: 30px;
+    height: 28px;
+}
+
+header label:hover{
+    cursor: pointer;
+    background: rgba(250, 187, 15, 0.7);
+}
+
+.menu ul{
+    margin:0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+.menu li a{
+    display: block;
+    padding: 10px 14px;
+    color:black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.menu li.active,
+.menu li:hover{
+background: rgba(237, 221, 2, 0.788); 
+}
+
+.menu li.active:hover{
+    background: none;
+}
+
+#signIn{
+    background:#e8e8e8;
+}
+
+#signIn:hover{
+    background: rgba(237, 221, 2, 0.788);
+}
+
+@media(max-width: 768px){
+    header label {
+        display: block;
+        margin-top: 10px;
+    }
+
+    .menu{
+        margin-top:3px;
+        margin-right: 10px;
+        position: absolute;
+        background: #ffff;
+        transform: translate(110px, 40px);
+        visibility: none;
+    }
+
+    .menu ul {
+        flex-direction: column;
+    }
+
+    #btn-menu:checked ~ .menu{
+        visibility: visible;
+        z-index: 1;
+    }
+}

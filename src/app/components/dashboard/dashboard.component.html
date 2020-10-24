@@ -1,0 +1,164 @@
+<div class="container">
+  <nav>
+    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+      <a class="nav-link active" id="nav-all-tab" data-toggle="tab" href="#nav-all" role="tab" aria-controls="nav-all"
+        aria-selected="true">All</a>
+      <a class="nav-link" id="nav-release-tab" data-toggle="tab" href="#nav-release" role="tab"
+        aria-controls="nav-release" aria-selected="false">New Releases</a>
+      <a class="nav-link" id="nav-popular-tab" data-toggle="tab" href="#nav-popular" role="tab"
+        aria-controls="nav-popular" aria-selected="false">Most Popular</a>
+      <a class="nav-link" id="nav-trends-tab" data-toggle="tab" href="#nav-trends" role="tab" aria-controls="nav-trends"
+        aria-selected="false">Trends</a>
+      <a class="nav-link" id="nav-favorites-tab" data-toggle="tab" href="#nav-favorites" role="tab"
+        aria-controls="nav-favorites" aria-selected="false">My Favorites</a>
+      <a class="nav-link" id="nav-recomendations-tab" data-toggle="tab" href="#nav-recomendations" role="tab"
+        aria-controls="nav-recomendations" aria-selected="false">Recomendations</a>
+    </div>
+  </nav>
+  <div class="tab-content" id="nav-tabContent">
+
+    <div class="tab-pane fade show active" id="nav-all" role="tabpanel" aria-labelledby="nav-all-tab">
+
+      <div class="row row-cols-2 row-cols-md-4">
+
+        <div id="card" class="col mb-4" *ngFor="let movie of movies; let i= index">
+          
+          <img [src]="movie.img" class="card-img-top" [alt]="movie.title">
+
+          <div class="options-container">
+
+            <h1>{{ movie.title | uppercase }}</h1>
+            <button id="button1" type="button" class="btn btn-warning btn-lg mr-2"><strong>WATCH NOW</strong></button>
+            <button id="button2" type="button" class="btn btn-outline-secondary btn-lg"> <strong> MORE INFO</strong>
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="tab-pane fade" id="nav-release" role="tabpanel" aria-labelledby="nav-release-tab">
+
+      <div class="row row-cols-2 row-cols-md-4">
+
+        <div id="card" class="col mb-4" *ngFor="let movie of movies; let i= index">
+          
+          <img *ngIf="movie.release==2018" [src]="movie.img" class="card-img-top" [alt]="movie.title">
+
+          <div class="options-container">
+
+            <h1>{{ movie.title | uppercase }}</h1>
+            <button id="button1" type="button" class="btn btn-warning btn-lg mr-2"><strong>WATCH NOW</strong></button>
+            <button id="button2" type="button" class="btn btn-outline-secondary btn-lg"> <strong> MORE INFO</strong>
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="tab-pane fade" id="nav-popular" role="tabpanel" aria-labelledby="nav-popular-tab">
+
+
+      <div class="row row-cols-2 row-cols-md-4">
+
+        <div id="card" class="col mb-4" *ngFor="let movie of movies; let i= index">
+          
+          <img *ngIf="movie.views>=30000000" [src]="movie.img" class="card-img-top" [alt]="movie.title">
+
+          <div class="options-container" >
+
+            <h1>{{ movie.title | uppercase }}</h1>
+            <button id="button1" type="button" class="btn btn-warning btn-lg mr-2"><strong>WATCH NOW</strong></button>
+            <button id="button2" type="button" class="btn btn-outline-secondary btn-lg"> <strong> MORE INFO</strong>
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+    </div>
+
+    <div class="tab-pane fade" id="nav-trends" role="tabpanel" aria-labelledby="nav-trends-tab">
+
+      <div class="row row-cols-2 row-cols-md-4">
+
+        <div id="card" class="col mb-4" *ngFor="let movie of movies; let i= index">
+          
+          <img *ngIf="movie.views>=50000000 " [src]="movie.img" class="card-img-top" [alt]="movie.title">
+
+          <div class="options-container">
+
+            <h1>{{ movie.title | uppercase }}</h1>
+            <button id="button1" type="button" class="btn btn-warning btn-lg mr-2"><strong>WATCH NOW</strong></button>
+            <button id="button2" type="button" class="btn btn-outline-secondary btn-lg"> <strong> MORE INFO</strong>
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="tab-pane fade" id="nav-favorites" role="tabpanel" aria-labelledby="nav-favorites-tab">
+
+
+      <div class="row row-cols-2 row-cols-md-4">
+
+        <div id="card" class="col mb-4" *ngFor="let movie of movies; let i= index">
+          
+          <img *ngIf="movie.favorite == true" [src]="movie.img" class="card-img-top" [alt]="movie.title">
+
+          <div class="options-container">
+
+            <h1>{{ movie.title | uppercase }}</h1>
+            <button id="button1" type="button" class="btn btn-warning btn-lg mr-2"><strong>WATCH NOW</strong></button>
+            <button id="button2" type="button" class="btn btn-outline-secondary btn-lg"> <strong> MORE INFO</strong>
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+    <div class="tab-pane fade" id="nav-recomendations" role="tabpanel" aria-labelledby="nav-recomendations-tab">
+
+      <div class="row row-cols-2 row-cols-md-4">
+
+        <div id="card" class="col mb-4" *ngFor="let movie of movies; let i= index">
+          
+          <img *ngIf="movie.favorite == false" [src]="movie.img" class="card-img-top" [alt]="movie.title">
+
+          <div class="options-container">
+
+            <h1>{{ movie.title | uppercase }}</h1>
+            <button id="button1" type="button" class="btn btn-warning btn-lg mr-2"><strong>WATCH NOW</strong></button>
+            <button id="button2" type="button" class="btn btn-outline-secondary btn-lg"> <strong> MORE INFO</strong>
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+    </div>
+  </div>
+</div>

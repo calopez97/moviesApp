@@ -1,0 +1,14 @@
+
+<ngb-carousel class="carousel-slide">
+    <ng-template class="slider" ngbSlide *ngFor="let banner of banners; let i=index">
+      <div class="picsum-img-wrapper">
+        <img class="image" [src]="banner.img" [alt]="banner.title">
+      </div>
+      <div class="carousel-caption">
+        <h1>{{ banner.title | uppercase }}</h1>
+        <p>{{ banner.description }}</p>
+        <button id="button1" type="button" class="btn btn-warning btn-lg mr-2"><strong>WATCH NOW</strong></button> 
+        <button id="button2" type="button" class="btn btn-outline-secondary btn-lg"> <strong> MORE INFO</strong> </button> 
+      </div>
+    </ng-template>
+</ngb-carousel>

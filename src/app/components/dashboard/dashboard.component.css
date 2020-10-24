@@ -1,0 +1,164 @@
+/* #nav-tab{
+    padding-left: 190px;
+}
+#nav-tabContent{
+    padding-left: 190px;
+} */
+.container{
+    padding: 6.5%;
+    padding-top: 0;
+    display:flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+#nav-tab a{
+    color: black;
+    transition: 10ms;
+}
+
+#nav-tab a:hover{
+    transform: scale(1.05);
+}
+#nav-tab a.active{
+    border-bottom: 4px solid;
+}
+
+#nav-tabContent{
+    margin-top:20px;
+}
+
+
+#card {
+    position: relative;
+    width: 88%;
+    height: 100%;
+    transition: all 500ms ease-out;
+}
+
+
+.options-container{
+    text-align:  center;
+    position: absolute;
+    top:0; 
+    width: 88%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    visibility: hidden;
+    cursor: pointer;
+}
+
+#card:hover .options-container{
+    opacity: 1;
+    visibility: visible;
+    cursor: pointer;
+}
+
+#card:hover .options-container h1{
+margin-top:45px;
+margin-bottom:45px;
+
+}
+
+.options-container h1{
+    font-size:16px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    transition: all 500ms ease-out;
+    margin-top:80px
+}
+
+.options-container h1{
+    color: white;
+}
+
+.options-container button#button1{
+    width: 123px;
+    border-radius: 0%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.options-container button#button2{
+    width: 123px;
+    border-radius: 0%;
+    transform:translateX(-3px)
+}
+
+.options-container button#button2:hover{
+         background: transparent;
+         border-color: white;
+}
+
+ #onlycard{
+    text-align:  center;
+    position: absolute;
+    top:0; 
+    width: 90%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    visibility: hidden;
+    cursor: pointer;
+}
+
+#onlycard button#button1{
+    width: 145px;
+    border-radius: 0%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#onlycard button#button2{
+    width: 145px;
+    border-radius: 0%;
+    transform:translateX(-3px)
+}
+
+@media(max-width:768px){
+    #nav-tab{
+        padding-left: 20px;
+        justify-content: space-around;
+    }
+
+    .options-container{
+        text-align:  center;
+        position: absolute;
+        top:0; 
+        width: 83%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        opacity: 0;
+        visibility: hidden;
+        cursor: pointer;
+    }
+
+    #card:hover .options-container{
+        opacity: 1;
+        visibility: visible;
+        cursor: pointer;
+    }
+
+    .options-container h1{
+        font-size:16px;
+        margin-bottom: 5px !important;
+        font-weight: 600;
+        transition: all 500ms ease-out;
+        margin-top:20px !important;
+    }
+
+    .options-container button#button1{
+        width: 123px;
+        border-radius: 0%;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        margin-right: 0px !important;
+    }
+
+    .options-container button#button2{
+        width: 123px;
+        border-radius: 0%;
+        transform:translateX(0px)
+    }
+}
